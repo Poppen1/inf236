@@ -18,7 +18,7 @@ Puede acceder a la Wiki mediante el siguiente [enlace](https://gitlab.inf.utfsm.
 
 
 * [Video presentación cliente](https://www.youtube.com/watch?v=3jkFqqdtNR8)
-* [Video Prototipo HU]()
+* [Video Prototipo HU](https://youtu.be/qe_Kusuuonw)
 
 ## Aspectos técnicos relevantes
 
