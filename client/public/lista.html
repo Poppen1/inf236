@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de espera</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #e5e5e5;
+        }
+
+    </style>
+    <script>
+        window.onload = function() {
+            var table = document.getElementById("myTable");
+            var column = 3;
+
+            var rows = Array.from(table.rows).slice(1);
+
+           
+
+            rows.sort(function(a, b) {
+                var valueA = parseInt(a.cells[column].textContent);
+                var valueB = parseInt(b.cells[column].textContent);
+                return valueA - valueB;
+            });
+
+            for (var i = 0; i < rows.length; i++) {
+                table.appendChild(rows[i]);
+            }
+
+            var column = 0;
+
+            for (var i = 1; i < table.rows.length; i++) {
+                var cell = table.rows[i].cells[column];
+                cell.textContent = i ;
+            }
+        };
+    </script>
+</head>
+<body>
+    <table id="myTable">
+        <tr>
+            <th></th>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Triage</th>
+            <th>Hora de Ingreso</th>
+            <th>Acompañante</th>
+            <th>Ficha</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Francisco Gonzalez</td>
+            <td>21</td>
+            <td>4</td>
+            <td>13:20</td>
+            <td>NO</td>
+            <td>ficha</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Felipe Fernandez</td>
+            <td>23</td>
+            <td>3</td>
+            <td>2:22</td>
+            <td>Padres</td>
+            <td>ficha</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Sebastian Poppen</td>
+            <td>22</td>
+            <td>2</td>
+            <td>15:50</td>
+            <td>Amigos</td>
+            <td>ficha</td>
+        </tr>
+    </table>
+</body>
+</html>
