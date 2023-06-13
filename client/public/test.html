@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Proyecto - Formulario</title>
+	<style>
+
+table {
+			border-collapse: collapse;
+			width: 100%;
+		}
+		th, td {
+			border: 1px solid #ccc;
+			padding: 10px;
+			text-align: center;
+		}
+		th {
+			background-color: #f2f2f2;
+		}
+
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 20px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			max-width: 500px;
+			margin: auto;
+		}
+		label {
+			display: block;
+			margin-bottom: 5px;
+		}
+		input[type="text"], select {
+			padding: 5px;
+			margin-bottom: 10px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			font-size: 16px;
+			width: 100%;
+			box-sizing: border-box;
+		}
+		input[type="time"] {
+			padding: 5px;
+			margin-bottom: 10px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			font-size: 16px;
+			width: 100%;
+			box-sizing: border-box;
+		}
+		textarea {
+			padding: 5px;
+			margin-bottom: 10px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			font-size: 16px;
+			width: 100%;
+			height: 100px;
+			box-sizing: border-box;
+		}
+		input[type="submit"] {
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			padding: 10px;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 16px;
+		}
+		input[type="submit"]:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+</head>
+<body>
+	<h1>Proyecto</h1>
+	<form>
+		<label for="nombre">Nombre:</label>
+		<input type="text" id="nombre" name="nombre" required>
+
+		<label for="apellido">Apellido:</label>
+		<input type="text" id="apellido" name="apellido" required>
+
+		<label for="rut">RUT:</label>
+		<input type="text" id="rut" name="rut" minlength="9" maxlength="10" required>
+
+		<label for="direccion">Dirección:</label>
+		<input type="text" id="direccion" name="direccion" required>
+
+		<label for="acompanante">Acompañante:</label>
+		<input type="text" id="acompanante" name="acompanante" required>
+
+		<label for="edad">Edad:</label>
+		<input type="text" id="edad" name="edad" required>
+
+    <label for="hora">Hora de atencion:</label>
+		<input type="text" id="hora" name="hora" required>
+
+    <label for="clasificacion">Clasificacion:</label>
+		<select id="clasificacion" name="clasificacion" required>
+			<option value="">Seleccione una Clasificacion</option>
+			<option value="C1">C1</option>
+			<option value="C2">C2</option>
+      <option value="3C">C3</option>
+      <option value="C4">C4</option>
+      <option value="C5">C5</option>
+		</select>
+
+    <table>
+      <thead>
+        <tr>
+		  <th></th>
+          <th>SIG_V</th>
+          <th>PA</th>
+          <th>T°</th>
+          <th>FC</th>
+          <th>HGT</th>
+          <th>FR</th>
+          <th>SAT%</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+		  <td><input type="text"></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+		  <td><input type="text"></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+		  <td><input type="text"></td>
+        </tr>
+        <tr>
+
+        </tr>
+      </tbody>
+    </table>
+
+		<label for="prevision">Previsión:</label>
+		<input type="text" id="prevision" name="prevision" required>
+
+		<label for="cesfam_origen">CESFAM origen:</label>
+		<input type="text" id="cesfam_origen" name="cesfam_origen" required>
+
+		<label for="motivo_consulta">Motivo de consulta:</label>
+		<textarea id="motivo_consulta" name="motivo_consulta" required></textarea>
+
+    <label for="examenes_solicitados">Examenes solicitados:</label>
+		<textarea id="examenes_solicitados" name="examenes_solicitados" required></textarea>
+
+    <label for="Diagnostico">Diagnostico:</label>
+		<textarea id="Diagnostico" name="Diagnostico" required></textarea>
+
+    <label for="tratamiento_indicaciones">Tratamiento e indicaciones:</label>
+		<textarea id="tratamiento_indicaciones" name="tratamiento_indicaciones" required></textarea>
+
+		<label for="examenes_solicitados">
+
+    
+    <label for="creado_por">Creado por:</label>
+		
+    <label for="rol">Rol:</label>
+		<select id="rol" name="rol" required>
+			<option value="">Seleccione un rol</option>
+			<option value="Doctor/a">Doctor</option>
+			<option value="Enfermero/a">Enfermero</option>
+			<option value="Practicante">Practicante</option>
+		</select>
+
+		
+		<label for="nombre_creador">Nombre:</label>
+		<input type="text" id="nombre_creador" name="nombre_creador" required>
+
+		<label for="apellido_creador">Apellido:</label>
+		<input type="text" id="apellido_creador" name="apellido_creador" required>
+		</select>
+
+    <label for="ID_creador">ID:</label>
+		<input type="text" id="ID_creador" name="ID_creador" required>
+		</select>
+
+		<input type="submit" value="Enviar">
+	</form>
+</body>
+</html>

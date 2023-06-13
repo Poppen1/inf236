@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      max-width: 300px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type="button"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="button"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title>Login Form</title>
+    <style>
+      /* CSS styles here */
+    </style>
+    <script>
+      function login() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+  
+        // Perform basic validation
+        if (username === "" || password === "") {
+          alert("Please enter a username and password.");
+          return;
+        }
+  
+        // Check if the username and password are valid
+        if (username === "admin" && password === "password") {
+          window.location.href = "menu.html"; // Redirect to test.html
+        } else {
+          alert("Usuario o contraseña incorrecta.");
+        }
+      }
+  
+      function handleKeyPress(event) {
+        if (event.keyCode === 13) {
+          login();
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Login</h1>
+    <form>
+      <label for="username">Username:</label>
+      <input type="text" id="username" required placeholder="admin">
+  
+      <label for="password">Password:</label>
+      <input type="password" id="password" required placeholder="password" onkeydown="handleKeyPress(event)">
+  
+      <input type="button" value="Login" onclick="login()">
+    </form>
+  </body>
+  </html>
+  
