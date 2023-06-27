@@ -19,6 +19,7 @@ Puede acceder a la Wiki mediante el siguiente [enlace](https://github.com/Poppen
 
 * [Video presentación cliente](https://www.youtube.com/watch?v=3jkFqqdtNR8)
 * [Video Prototipo HU](https://youtu.be/qe_Kusuuonw)
+* [Video Explicación](https://www.youtube.com/watch?v=iuV3STtAxHM)
 
 ## Aspectos técnicos relevantes
 
