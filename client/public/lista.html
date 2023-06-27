@@ -28,6 +28,25 @@
 
     </style>
     <script>
+        const quety = "SELECT FROM table * SORT BY table.time"; 
+
+        const MongoDBConnection = require('./connection_script');
+
+        async function getDataFromMongoDB() {
+
+        const connection = new MongoDBConnection('mongodb://localhost:27017', 'your_database');
+
+        await connection.connect();
+
+        const collectionName = 'your_collection';
+        const filter = { age: { $gte: 30 } };
+        const data = await connection.getData(collectionName, filter);
+        console.log('Retrieved data:', data);
+
+        connection.disconnect();
+        }
+
+        getDataFromMongoDB();
         window.onload = function() {
             var table = document.getElementById("myTable");
             var column = 3;
