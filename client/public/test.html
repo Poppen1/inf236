@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Proyecto - Formulario</title>
+	<title>Ingreso Paciente</title>
 	<style>
 
 table {
@@ -72,9 +72,31 @@ table {
 			background-color: #3e8e41;
 		}
 	</style>
+	<script>
+	const MongoDBConnection = require('./conexion.js');
+
+	async function insertDataToMongoDB() {
+	// Create an instance of MongoDBConnection
+	const connection = new MongoDBConnection('mongodb+srv://felipefernandeza:x1YzEtMipkzAsaFi@cluster0.bei39w6.mongodb.net/?retryWrites=true&w=majority', 'your_database');
+
+	// Connect to MongoDB
+	await connection.connect();
+
+	// Insert data into a collection
+	const collectionName = 'your_collection';
+	const fecha = new Date();
+	const data = { nombre: "", apellido: "", RUT: "", direccion: "", acompanante:"", edad:"", fecha : fecha, clasificacion: "", prevision: "", cesfam: "", motivo: "", examenes:"", diagnostico: "", tratamiento:"" };
+	await connection.insertData(collectionName, data);
+
+	// Disconnect from MongoDB
+	connection.disconnect();
+	}
+
+	insertDataToMongoDB();
+	</script>
 </head>
 <body>
-	<h1>Proyecto</h1>
+	<h1>Ingreso Paciente</h1>
 	<form>
 		<label for="nombre">Nombre:</label>
 		<input type="text" id="nombre" name="nombre" required>
@@ -92,7 +114,7 @@ table {
 		<input type="text" id="acompanante" name="acompanante" required>
 
 		<label for="edad">Edad:</label>
-		<input type="text" id="edad" name="edad" required>
+		<input type="text" id="edad" maxlength="10" name="edad" required>
 
     <label for="hora">Hora de atencion:</label>
 		<input type="text" id="hora" name="hora" required>
@@ -170,7 +192,7 @@ table {
     <label for="examenes_solicitados">Examenes solicitados:</label>
 		<textarea id="examenes_solicitados" name="examenes_solicitados" required></textarea>
 
-    <label for="Diagnostico">Diagnostico:</label>
+    <label for="Diagnostico">Sintomas y Diagnostico:</label>
 		<textarea id="Diagnostico" name="Diagnostico" required></textarea>
 
     <label for="tratamiento_indicaciones">Tratamiento e indicaciones:</label>
